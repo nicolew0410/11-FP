@@ -107,5 +107,10 @@ render();
 // }
 // render();
 
+
 var loader = new THREE.JSONLoader();
-loader.load('https://github.com/nicolew0410/json/blob/main/THREEFINALLY.json;')
+loader.load('THREEFINALLY.json'), function (g,m){
+    obj = new THREE.mesh(g,m)
+    scene.add(obj);
+};
+
