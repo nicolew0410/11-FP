@@ -19,16 +19,15 @@ var light = new THREE.AmbientLight (0xffffff, 1);
 scene.add(light);
 
 
-// var loader = new THREE.glTFLoader();
-// loader.load(
-//     'LAST.gltf',
-//     function( object ){
-//         scene.add(object)
-//     }
-//     );
-// Future work WHY DOESNT THIS WORK -> My perfectionist side is making me frustrated
-// Worked on it for 3 hours with 3 loaders and many diff file formats AND IT WONT WORK
-// what does it mean to run things locally? i get the general basis but i havent been taught this
+const gltfLoader = new THREE.GLTFLoader();
+gltfLoader.load(
+    'LAST.gltf',
+    function( object ){
+    scene.add(object)
+    }
+    );
+// Future work 
+// Worked on it for 3 hours with 3 loaders (json, obj, gltf)
 
 var render = function() {
 requestAnimationFrame(render);
