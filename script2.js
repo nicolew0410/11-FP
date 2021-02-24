@@ -15,28 +15,24 @@ var scene = new THREE.Scene();
 
             camera.updateProjectionMatrix();
         })
-        
 var light = new THREE.AmbientLight (0xffffff, 1);
 scene.add(light);
 
-// var loader = new THREE.ObjectLoader();
-// loader.load('pleasefinally.obj', 
-// function (object){
-//     scene.add(object);
-// });
 
-function loadModel() {
-    var loader = new THREE.OBJLoader();
-    object.rotation.z = Math.PI;
-    loader.load( 'pleasefinally.obj', function ( object ) {
-      scene.add( object );
-    });
-};
+// var loader = new THREE.glTFLoader();
+// loader.load(
+//     'LAST.gltf',
+//     function( object ){
+//         scene.add(object)
+//     }
+//     );
+// Future work WHY DOESNT THIS WORK -> My perfectionist side is making me frustrated
+// Worked on it for 3 hours with 3 loaders and many diff file formats AND IT WONT WORK
+// what does it mean to run things locally? i get the general basis but i havent been taught this
 
 var render = function() {
 requestAnimationFrame(render);
 renderer.render(scene, camera);
 }
-
+// loader();
 render();
-loadModel();
